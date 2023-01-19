@@ -1,0 +1,26 @@
+msgid "Chat id:{0}"
+msgstr ""
+
+msgid "Sure to quit chat?"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "Username:"
+msgstr ""
+
+msgid "Password:"
+msgstr ""
+
+msgid "New chat"
+msgstr ""
+
+msgid "Join chat"
+msgstr ""
+
+msgid "Quit chat"
+msgstr ""
+
+
+

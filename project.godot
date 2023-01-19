@@ -1,0 +1,64 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+_global_script_classes=[{
+"base": "Node",
+"class": &"VccClient",
+"language": &"GDScript",
+"path": "res://webvcc_client.gd"
+}]
+_global_script_class_icons={
+"VccClient": ""
+}
+
+[application]
+
+config/name="vcc_godot"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.0")
+run/low_processor_mode=true
+boot_splash/show_image=false
+config/icon="res://icon.png"
+config/default_server="wss://chat.vcc.intirain.cc/ws"
+config/default_server.debug="ws://192.168.3.34:7000/"
+
+[display]
+
+window/energy_saving/keep_screen_on=false
+window/handheld/orientation=1
+window/vsync/vsync_mode=0
+window/ios/hide_home_indicator=false
+window/size/width.Android=600
+window/size/height.Android=1024
+window/stretch/scale.android=2.5
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://locales/zh_CN.mo")
+
+[locale]
+
+translations=PackedStringArray("res://locales/zh_CN.mo")
+locale_filter=[1, ["zh_CN"]]
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+driver/driver_name="opengl3"
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+environment/default_environment="res://default_env.tres"
