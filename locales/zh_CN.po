@@ -12,26 +12,45 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.2.2\n"
 
-msgid "Chat id:{0}"
-msgstr "聊天号:{0}"
-
-msgid "Sure to quit chat?"
-msgstr "确定要退出聊天？"
-
-msgid "Login"
-msgstr "登录"
-
-msgid "Username:"
-msgstr "用户名:"
-
-msgid "Password:"
-msgstr "密码:"
-
+#: ChatUI.tscn
 msgid "New chat"
 msgstr "创建聊天"
 
+#: ChatUI.tscn
 msgid "Join chat"
 msgstr "加入聊天"
 
-msgid "Quit chat"
-msgstr "退出聊天"
+#: ChatUI.tscn
+msgid "Chat id"
+msgstr "聊天号"
+
+#: ChatUI.tscn
+msgid "Chat name"
+msgstr "聊天名"
+
+#: ChatUI.tscn
+msgid "Sure to quit chat?"
+msgstr "确定要退出聊天？"
+
+#: Login.tscn
+msgid "Username:"
+msgstr "用户名:"
+
+#: Login.tscn
+msgid "Web vcc url:"
+msgstr "Web vcc 地址:"
+
+#: Login.tscn
+msgid "Login"
+msgstr "登录"
+
+#: Login.tscn
+msgid "Password:"
+msgstr "密码:"
+
+#: Login.tscn
+msgid "Failed to login!"
+msgstr "登录失败!"
+
+#~ msgid "Quit chat"
+#~ msgstr "退出聊天"

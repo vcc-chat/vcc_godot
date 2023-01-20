@@ -23,9 +23,9 @@ _global_script_class_icons={
 config/name="vcc_godot"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.0")
-run/low_processor_mode=true
 boot_splash/show_image=false
 config/icon="res://icon.png"
+config/quit_on_go_back=false
 config/default_server="wss://chat.vcc.intirain.cc/ws"
 config/default_server.debug="ws://192.168.3.34:7000/"
 
@@ -33,19 +33,20 @@ config/default_server.debug="ws://192.168.3.34:7000/"
 
 window/energy_saving/keep_screen_on=false
 window/handheld/orientation=1
-window/vsync/vsync_mode=0
 window/ios/hide_home_indicator=false
 window/size/width.Android=600
 window/size/height.Android=1024
-window/stretch/scale.android=2.5
+window/stretch/scale.android=1.0
 
 [gui]
 
+theme/custom="res://editor_theme.tres"
 common/drop_mouse_on_gui_input_disabled=true
 
 [internationalization]
 
 locale/translations=PackedStringArray("res://locales/zh_CN.mo")
+locale/translations_pot_files=PackedStringArray("res://ChatUI.gd", "res://ChatUI.tscn", "res://godux.gd", "res://Login.gd", "res://Login.tscn", "res://main.gd", "res://main.tscn", "res://mainUI.gd", "res://mainUI.tscn", "res://utils.gd", "res://webvcc_client.gd")
 
 [locale]
 

@@ -2,7 +2,6 @@ extends Control
 
 signal login_success
 func _ready():
-	print(1)
 	$URL.text=ProjectSettings.get("application/config/default_server")
 @onready var client=$"../VccClient"
 func do_connect():
