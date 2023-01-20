@@ -18,10 +18,12 @@ var message="{usrname}:\n    {msg}\n"
 var chats=[]
 var current_chat=[null,null,null]
 var boxsize=0
+var is_ready=false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.root=$"../"
-	on_resize()
+	self.is_ready=true
+	self.on_resize()
 	if root.is_moblie:
 		$HBoxContainer.add_theme_constant_override("separation",root.margin[1]*2)
 		$HBoxContainer/Left.size_flags_stretch_ratio=1
@@ -36,10 +38,12 @@ func _ready():
 		self.change_chat(0)
 	settings_popup.connect("id_pressed",Callable(self,"settings_pressed"))
 func on_resize():
+	if not self.is_ready:
+		return
 	var root=$"../"
-	var size=DisplayServer.window_get_size()
+	var size=root.size
 	$HBoxContainer.size.y=size.y
-	if size.y>size.x:
+	if size.y>size.x :
 		self.moblieize(true)
 		root.is_moblie=true
 	else:
@@ -55,6 +59,7 @@ func on_resize():
 		self.boxsize=0
 func moblieize(moblie):
 	var tween=create_tween()
+	var root=$"../"
 	tween.set_trans(Tween.TRANS_CIRC)
 	if moblie:
 		$HBoxContainer/Right/HBoxContainer/Button.visible=true

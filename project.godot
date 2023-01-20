@@ -31,6 +31,8 @@ config/default_server.debug="ws://192.168.3.34:7000/"
 
 [display]
 
+window/size/viewport_width=648
+window/size/viewport_height=1152
 window/energy_saving/keep_screen_on=false
 window/handheld/orientation=1
 window/ios/hide_home_indicator=false
@@ -63,3 +65,4 @@ driver/driver_name="opengl3"
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 environment/default_environment="res://default_env.tres"
+driver/driver_name.android="vulkan"
