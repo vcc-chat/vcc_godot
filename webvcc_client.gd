@@ -8,7 +8,9 @@ var json_resp
 var uid=null
 var connected=false
 var chatlist=false
+var server=null
 var client = WebSocketClient.new()
+var token=null
 func _ready():
 	client.connect("connection_closed",Callable(self,"closed"))
 	client.connect("connection_error",Callable(self,"closed"))
@@ -19,7 +21,8 @@ func _process(delta):
 func closed(_a):
 	print("Fuck! Our connection has been closed by server!")
 signal connection_established
-func connect_ws(url):
+func connect_ws(url:String):
+	self.server=url
 	var err = client.connect_to_url(url)
 	return err
 func _connected(a):
@@ -41,11 +44,19 @@ func send_json(data):
 func login(username,passwd):
 	send_json({"type":"login","usrname":username,"msg":passwd,"uid":0,"uuid":"314e82b2-66af-4e4e-b454-9da0a72fed45"})
 	await self.on_json
-	print(1)
 	if json_resp["type"]=="login":
-		print(json_resp)
 		self.uid=json_resp["uid"]
+		self.token=json_resp["msg"]
 		return json_resp
+func token_login(token):
+	send_json({"type":"token_login","msg":token})
+	await self.on_json
+	if json_resp["type"]=="token_login":
+		return json_resp
+func reconnect():
+	if self.server!=null:
+		self.connect_ws(str(self.server))
+		await self.token_login(self.token)
 func list_chat():
 	send_json({"type":"chat_list_somebody_joined","uid":self.uid,"usrname":"","msg":""})
 	while 1:

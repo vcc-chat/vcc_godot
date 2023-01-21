@@ -153,3 +153,8 @@ func _on_TextEdit_focus_entered():
 
 func prevent_event(event):
 	event.ca
+
+
+func _on_button_2_button_down():
+	print(1)
+	client.reconnect()

@@ -26,8 +26,8 @@ config/features=PackedStringArray("4.0")
 boot_splash/show_image=false
 config/icon="res://icon.png"
 config/quit_on_go_back=false
-config/default_server="wss://chat.vcc.intirain.cc/ws"
-config/default_server.debug="ws://192.168.3.34:7000/"
+config/default_server="wss://chat.vcc.intirain.cc/ws/"
+config/default_server.debug="wss://chat.vcc.intirain.cc/ws/"
 
 [display]
 
@@ -38,7 +38,6 @@ window/handheld/orientation=1
 window/ios/hide_home_indicator=false
 window/size/width.Android=600
 window/size/height.Android=1024
-window/stretch/scale.android=1.0
 
 [gui]
 
